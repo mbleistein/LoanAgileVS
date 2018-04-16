@@ -15,7 +15,7 @@
     <DebugSymbols>True</DebugSymbols>
     <MaxError>100</MaxError>
     <KeepCodeAnalysisDataFiles>True</KeepCodeAnalysisDataFiles>
-    <RunMicroFocusCodeAnalysisAfterBuild>True</RunMicroFocusCodeAnalysisAfterBuild>
+    <RunMicroFocusCodeAnalysisAfterBuild>False</RunMicroFocusCodeAnalysisAfterBuild>
     <ActiveRulesets>General Queries;Coding Standards;Within Entire Program</ActiveRulesets>
     <TestCover>True</TestCover>
   </PropertyGroup>
