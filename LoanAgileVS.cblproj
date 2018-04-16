@@ -17,6 +17,7 @@
     <KeepCodeAnalysisDataFiles>True</KeepCodeAnalysisDataFiles>
     <RunMicroFocusCodeAnalysisAfterBuild>True</RunMicroFocusCodeAnalysisAfterBuild>
     <ActiveRulesets>General Queries;Coding Standards;Within Entire Program</ActiveRulesets>
+    <TestCover>True</TestCover>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <OutputPath>.\bin\x86\Release\</OutputPath>
