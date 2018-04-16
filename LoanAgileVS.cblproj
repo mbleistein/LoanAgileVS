@@ -3,7 +3,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <ProjectGuid>{0DC4F9F9-41D5-4D6A-8F6C-941D953976DB}</ProjectGuid>
-    <OutputName>LoanAgileVS</OutputName>
+    <OutputName>LOANAMORT</OutputName>
     <OutputType>Library</OutputType>
     <RootNamespace>LoanAgileVS</RootNamespace>
     <MFProjectType>Native</MFProjectType>
