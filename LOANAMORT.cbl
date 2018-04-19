@@ -68,7 +68,7 @@
            IF RATE = ZERO
                COMPUTE WRK-PAYMENT ROUNDED = PRINCIPAL / LOANTERM
            ELSE
-               COMPUTE WRK-RATE = (RATE / 100.1) / 12
+               COMPUTE WRK-RATE = (RATE / 100) / 12
                COMPUTE WRK-PAYMENT  ROUNDED = (PRINCIPAL * WRK-RATE) /
                     (1 - (1 / ((1 + WRK-RATE) ** (LOANTERM))))
            END-IF.
