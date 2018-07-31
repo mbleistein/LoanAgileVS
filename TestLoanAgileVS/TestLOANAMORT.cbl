@@ -32,7 +32,7 @@
            goback returning 0
        .
 
-       entry MFU-TC-PREFIX & TEST-TESTLOANAMORT.
+       entry MFU-TC-PREFIX & "01".
 
 		   move 36000 to PRINCIPAL
 		   move 4.5   to RATE
@@ -56,24 +56,78 @@
                  BY VALUE 80
            END-IF
 
-       
+           *> Verify the outputs here
+           goback returning MFU-PASS-RETURN-CODE
+       .
 
+       entry MFU-TC-PREFIX & "02".
+
+		   move 85000  to PRINCIPAL
+		   move 5.5    to RATE
+		   move 120    to LOANTERM
+
+           call "LOANAMORT" using
+                       by reference LOANINFO
+                       by reference OUTDATA
+
+		   IF OUTINTPAID(1) =   "  $389.58" and
+			  OUTPRINCPAID(1) = "  $532.89" and
+			  OUTPAYMENT(1)   = "  $922.47" and
+			  OUTBALANCE(1)   = "$84,467.00" and
+			  OUTTOTINTPAID   = "$5,695.94"
+			   continue
+	       else 
+              move OUTTOTINTPAID to WK-ACTUAL-VALUE
+			  move "$5,695.94"   to WK-EXPECTED-VALUE
+              CALL "MFU_ASSERT_FAIL" USING
+                 BY REFERENCE WS-FAIL-MSG
+                 BY VALUE 80
+           END-IF
 
            *> Verify the outputs here
            goback returning MFU-PASS-RETURN-CODE
        .
 
+       entry MFU-TC-PREFIX & "03".
+
+		   move 6500  to PRINCIPAL
+		   move 6.9   to RATE
+		   move 36    to LOANTERM
+
+           call "LOANAMORT" using
+                       by reference LOANINFO
+                       by reference OUTDATA
+
+		   IF OUTINTPAID(1) =   "   $37.37" and
+			  OUTPRINCPAID(1) = "  $163.02" and
+			  OUTPAYMENT(1)   = "  $200.40" and
+			  OUTBALANCE(1)   = " $6,337.00" and
+			  OUTTOTINTPAID   = "  $713.85"
+			   continue
+	       else 
+              move OUTTOTINTPAID to WK-ACTUAL-VALUE
+			  move "$3,404.60"   to WK-EXPECTED-VALUE
+              CALL "MFU_ASSERT_FAIL" USING
+                 BY REFERENCE WS-FAIL-MSG
+                 BY VALUE 80
+           END-IF
+
+           *> Verify the outputs here
+           goback returning MFU-PASS-RETURN-CODE
+       .
+
+
       $region TestCase Configuration
 
-       entry MFU-TC-SETUP-PREFIX & TEST-TESTLOANAMORT.
-           *> Load the library that is being tested
-           set pp to entry "LoanAgileVS"
-
-           initialize LOANINFO
-           initialize OUTDATA
-           *> Add any other test setup code here
-           goback returning 0
-       .
+      *entry MFU-TC-SETUP-PREFIX & TEST-TESTLOANAMORT.
+      *    *> Load the library that is being tested
+      *    set pp to entry "LoanAgileVS"
+      *
+      *    initialize LOANINFO
+      *    initialize OUTDATA
+      *    *> Add any other test setup code here
+      *    goback returning 0
+      *.
 
       $end-region
 
