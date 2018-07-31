@@ -106,7 +106,7 @@
 			   continue
 	       else 
               move OUTTOTINTPAID to WK-ACTUAL-VALUE
-			  move "$3,404.60"   to WK-EXPECTED-VALUE
+			  move "  $713.85"   to WK-EXPECTED-VALUE
               CALL "MFU_ASSERT_FAIL" USING
                  BY REFERENCE WS-FAIL-MSG
                  BY VALUE 80
