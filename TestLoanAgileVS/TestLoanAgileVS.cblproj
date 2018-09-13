@@ -17,6 +17,7 @@
     <DebugSymbols>True</DebugSymbols>
     <MaxError>100</MaxError>
     <SourceFormat>Variable</SourceFormat>
+    <TestCover>True</TestCover>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <OutputPath>..\bin\x86\Release\</OutputPath>
