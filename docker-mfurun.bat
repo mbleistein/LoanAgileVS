@@ -8,7 +8,7 @@ rem same for the results directory
 set "SHARE_SRC_ARG=-v %CD%:c:\%SRC%"
 set "SHARE_RES_ARG=-v %CD%\results:c:\results -e RESULTS_DIR=c:\results"
 rem does the base image exist?
-MBdocker inspect --format='{{.Config.Image}}' %IMAGE% >nul 2>&1
+docker inspect --format='{{.Config.Image}}' %IMAGE% >nul 2>&1
 if errorlevel 1 (
 	echo ERROR: Aborting, the base %IMAGE% is not present
 	goto theend)
@@ -18,7 +18,7 @@ if errorlevel 1 (
 echo Creating docker container using %IMAGE%
 echo  Directory %SRC% is shared to the container
 echo  Directory results contains the results
-MBdocker run --rm %SHARE_SRC_ARG% %SHARE_RES_ARG% --workdir c:\src %IMAGE% cmd.exe /c bld_and_mfurun.bat
+docker run --rm %SHARE_SRC_ARG% %SHARE_RES_ARG% --workdir c:\src %IMAGE% cmd.exe /c bld_and_mfurun.bat
 
 echo.
 echo Test results can be found in results dir:
