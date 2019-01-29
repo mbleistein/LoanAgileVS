@@ -7,8 +7,9 @@ msbuild LoanAgileVS.sln /p:OutDir=%WORK_DIR% /p:BaseIntermediateOutputPath=%WORK
 if errorlevel 1 goto theend
 
 cd %WORK_DIR%
+dir
 echo Running tests:
-mfurun -report:markdown -report:junit -jenkins-ci -jit:nodebug -timeout:10s -sp -outdir:results TestLoanAgileVS.mfu
+mfurun  -jenkins-ci -timeout:10s -sp -outdir:results TestLoanAgileVS.mfu
 echo.
 echo Moving test results out of the container.
 move results\*.* %RESULTS_DIR% >nul
