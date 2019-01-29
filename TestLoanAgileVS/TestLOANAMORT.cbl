@@ -116,7 +116,6 @@
            goback returning MFU-PASS-RETURN-CODE
        .
 
-
       $region TestCase Configuration
 
       *entry MFU-TC-SETUP-PREFIX & TEST-TESTLOANAMORT.
