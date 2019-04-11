@@ -118,15 +118,15 @@
 
       $region TestCase Configuration
 
-      *entry MFU-TC-SETUP-PREFIX & TEST-TESTLOANAMORT.
-      *    *> Load the library that is being tested
-      *    set pp to entry "LoanAgileVS"
-      *
-      *    initialize LOANINFO
-      *    initialize OUTDATA
-      *    *> Add any other test setup code here
-      *    goback returning 0
-      *.
+       entry MFU-TC-SETUP-PREFIX & "01".
+           *> Load the library that is being tested
+           set pp to entry "LoanAgileVS"
+       
+           initialize LOANINFO
+           initialize OUTDATA
+           *> Add any other test setup code here
+           goback returning 0
+       .
 
       $end-region
 
