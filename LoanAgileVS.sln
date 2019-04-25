@@ -7,8 +7,6 @@ Project("{535C04D7-A2A5-47C7-83E0-B340A995CD1F}") = "LoanAgileVS", "LoanAgileVS.
 EndProject
 Project("{535C04D7-A2A5-47C7-83E0-B340A995CD1F}") = "TestLoanAgileVS", "TestLoanAgileVS\TestLoanAgileVS.cblproj", "{C6B947CB-78B2-4B22-9246-7BD4B401FAA6}"
 EndProject
-Project("{535C04D7-A2A5-47C7-83E0-B340A995CD1F}") = "TestLoanAgileVS2", "TestLoanAgileVS2\TestLoanAgileVS2.cblproj", "{3F0AA6A9-B8E0-45A7-A645-318AFEACECE9}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -23,10 +21,6 @@ Global
 		{C6B947CB-78B2-4B22-9246-7BD4B401FAA6}.Debug|x86.Build.0 = Debug|x86
 		{C6B947CB-78B2-4B22-9246-7BD4B401FAA6}.Release|x86.ActiveCfg = Release|x86
 		{C6B947CB-78B2-4B22-9246-7BD4B401FAA6}.Release|x86.Build.0 = Release|x86
-		{3F0AA6A9-B8E0-45A7-A645-318AFEACECE9}.Debug|x86.ActiveCfg = Debug|x86
-		{3F0AA6A9-B8E0-45A7-A645-318AFEACECE9}.Debug|x86.Build.0 = Debug|x86
-		{3F0AA6A9-B8E0-45A7-A645-318AFEACECE9}.Release|x86.ActiveCfg = Release|x86
-		{3F0AA6A9-B8E0-45A7-A645-318AFEACECE9}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
