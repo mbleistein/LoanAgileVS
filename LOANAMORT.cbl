@@ -2,7 +2,7 @@
 
        DATA DIVISION.
        WORKING-STORAGE SECTION.
-
+       01 PctDivider pic s9(3) comp-5 value 100.
        01 P PIC S9(8) COMP-3.
        01 T PIC S9(8) COMP-3.
        01 R PIC S9(9)V99(9).
@@ -37,9 +37,7 @@
        
        PROCEDURE DIVISION USING LOANINFO
                                 OUTDATA.
-
-                                
-                               
+                   
            PERFORM CALC-PAYMENT
            MOVE WRK-PAYMENT TO DECPAYMENT
            
@@ -69,8 +67,8 @@
                COMPUTE WRK-PAYMENT ROUNDED = PRINCIPAL / LOANTERM
            ELSE
                COMPUTE WRK-RATE = (RATE / 100) / 12
-               COMPUTE WRK-PAYMENT  ROUNDED = (PRINCIPAL * WRK-RATE) /
-                    (1 - (1 / ((1 + WRK-RATE) ** (LOANTERM))))
+               COMPUTE WRK-PAYMENT ROUNDED = (PRINCIPAL * WRK-RATE) /
+                 (1 - (1 / ((1 + WRK-RATE) ** (LOANTERM))))
            END-IF.
 
        CALC-PAYMENT-EXIT.

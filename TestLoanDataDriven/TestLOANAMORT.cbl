@@ -21,11 +21,19 @@
            05 OUTBALANCE PIC $(3),$(3).99.
          03 OUTTOTINTPAID PIC $$,$(3).99.
 
-       procedure division.
-           goback returning 0
-       .
+      *> CSV test data items
+       01 mfu-dd-principal is MFU-DD-VALUE external.
+       01 mfu-dd-rate is MFU-DD-VALUE external.
+       01 mfu-dd-loanterm is MFU-DD-VALUE external.
+       01 mfu-dd-intpaid is MFU-DD-VALUE external.
+       01 mfu-dd-principalpaid is MFU-DD-VALUE external.
+       01 mfu-dd-payment is MFU-DD-VALUE external.
+       01 mfu-dd-totintpaid is MFU-DD-VALUE external.
 
+       procedure division.
        entry MFU-TC-PREFIX & TEST-TESTLOANAMORT.
+
+           *> Move mfu-dd-* items into linkage parameters.
 
            call "LOANAMORT" using
                        by reference LOANINFO
@@ -36,6 +44,12 @@
        .
 
       $region TestCase Configuration
+
+       entry MFU-TC-METADATA-SETUP-PREFIX & TEST-TESTLOANAMORT.
+           move "csv:TestLOANAMORT.csv" to MFU-MD-TESTDATA
+           move "," to MFU-MD-DD-DSV
+           goback returning 0
+       .
 
        entry MFU-TC-SETUP-PREFIX & TEST-TESTLOANAMORT.
        perform InitializeLinkageData

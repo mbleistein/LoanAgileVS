@@ -2,11 +2,11 @@
   <PropertyGroup>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <ProjectGuid>{064FCEB1-6975-4F04-80A5-AE06AC2A46AA}</ProjectGuid>
+    <ProjectGuid>{25BB85ED-78D8-4BE2-9C3A-911301B424C2}</ProjectGuid>
     <ProjectTypeGuids>{9B4C43C6-818D-4EE4-A817-4CC01335F561};{535C04D7-A2A5-47c7-83E0-B340A995CD1F}</ProjectTypeGuids>
-    <OutputName>TestLoanAgileMN</OutputName>
+    <OutputName>TestLoanAgileVS1</OutputName>
     <OutputType>Library</OutputType>
-    <RootNamespace>TestLoanAgileMN</RootNamespace>
+    <RootNamespace>TestLoanAgileVS1</RootNamespace>
     <MFProjectType>Native</MFProjectType>
     <IdyCollectionName>$(MSBuildProjectName)</IdyCollectionName>
   </PropertyGroup>
