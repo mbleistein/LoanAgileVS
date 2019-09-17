@@ -68,7 +68,7 @@
            ELSE
                COMPUTE WRK-RATE = (RATE / 100) / 12
                COMPUTE WRK-PAYMENT ROUNDED = (PRINCIPAL * WRK-RATE) /
-                 (1 - (1 / ((1.1 + WRK-RATE) ** (LOANTERM))))
+                 (1 - (1 / ((1 + WRK-RATE) ** (LOANTERM))))
            END-IF.
 
        CALC-PAYMENT-EXIT.
