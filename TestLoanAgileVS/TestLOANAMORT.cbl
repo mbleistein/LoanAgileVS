@@ -34,8 +34,8 @@
 
        entry MFU-TC-PREFIX & "01".
 
-		   move 36000 to PRINCIPAL
-		   move 4.5   to RATE
+           move 36000 to PRINCIPAL
+           move 0.0   to RATE
 		   move 48    to LOANTERM
 
            call "LOANAMORT" using
