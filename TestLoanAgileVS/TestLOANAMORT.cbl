@@ -36,7 +36,7 @@
 
            move 36000 to PRINCIPAL
            move 4.5   to RATE
-		   move 49    to LOANTERM
+		   move 48    to LOANTERM
 
            call "LOANAMORT" using
                        by reference LOANINFO
