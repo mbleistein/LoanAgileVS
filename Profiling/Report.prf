@@ -1,0 +1,38 @@
+
+* Micro Focus COBOL Profiler                         24-Oct-19 12:26
+* TestLOANAMORT
+Total time:          0 milliseconds.      Module loaded once.
+-------------------------------------------------------------------------------
+Call Count  Program
+-------------------------------------------------------------------------------
+         1  TESTLOANAMORT
+-------------------------------------------------------------------------------
+% time      time   entries  micros/entry  (paragraph OF) Section
+-------------------------------------------------------------------------------
+  0.00         0         0         0      MFUS_01:{entry point}
+  0.00         0         0         0      MFUT_01:{entry point}
+  0.00         0         0         0      MFUT_02:{entry point}
+  0.00         0         0         0      MFUT_03:{entry point}
+  0.00         0         1         0      TESTLOANAMORT:{procedure divisio
+  0.00         0         0         0      Unnamed Paragraph 0001
+  0.00         0         0         0      Unnamed Paragraph 0004
+  0.00         0         0         0      Unnamed Paragraph 0005
+  0.00         0         0         0      Unnamed Paragraph 0006
+  0.00         0         0         0      Unnamed Paragraph 0007
+  0.00         0         0         0      Unnamed Paragraph 0008
+  0.00         0         0         0      Unnamed Paragraph 0009
+  0.00         0         0         0      Unnamed Paragraph 0010
+  0.00         0         0         0      Unnamed Paragraph 0011
+  0.00         0         0         0      Unnamed Paragraph 0012
+  0.00         0         0         0      Unnamed Paragraph 0013
+  0.00         0         0         0      Unnamed Paragraph 0014
+  0.00         0         0         0      Unnamed Paragraph 0015
+  0.00         0         0         0      Unnamed Paragraph 0016
+  0.00         0         0         0      Unnamed Paragraph 0017
+  0.00         0         0         0      Unnamed Paragraph 0018
+  0.00         0         0         0      Unnamed Paragraph 0019
+  0.00         0         0         0      Unnamed Paragraph 0020
+  0.00         0         0         0      Unnamed Paragraph 0021
+  0.00         0         0         0      Unnamed Paragraph 0022
+  0.00         0         0         0      Unnamed Paragraph 0027
+
