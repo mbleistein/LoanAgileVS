@@ -45,7 +45,7 @@
 		   IF OUTINTPAID(1) =   "  $135.00" and
 			  OUTPRINCPAID(1) = "  $685.92" and
 			  OUTPAYMENT(1)   = "  $820.92" and
-			  OUTBALANCE(1)   = "$35,314.00" and
+			  OUTBALANCE(1)   = "$35,314.08" and
 			  OUTTOTINTPAID   = "$3,404.60"
 			   continue
 	       else 
@@ -73,7 +73,7 @@
 		   IF OUTINTPAID(1) =   "  $389.58" and
 			  OUTPRINCPAID(1) = "  $532.89" and
 			  OUTPAYMENT(1)   = "  $922.47" and
-			  OUTBALANCE(1)   = "$84,467.00" and
+			  OUTBALANCE(1)   = "$84,467.11" and
 			  OUTTOTINTPAID   = "$5,695.94"
 			   continue
 	       else 
@@ -101,7 +101,7 @@
 		   IF OUTINTPAID(1) =   "   $37.37" and
 			  OUTPRINCPAID(1) = "  $163.02" and
 			  OUTPAYMENT(1)   = "  $200.40" and
-			  OUTBALANCE(1)   = " $6,337.00" and
+			  OUTBALANCE(1)   = " $6,336.98" and
 			  OUTTOTINTPAID   = "  $713.85"
 			   continue
 	       else 
