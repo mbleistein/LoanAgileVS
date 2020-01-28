@@ -46,7 +46,7 @@
 			  OUTPRINCPAID(1) = "  $685.92" and
 			  OUTPAYMENT(1)   = "  $820.92" and
 			  OUTBALANCE(1)   = "$35,314.08" and
-			  OUTTOTINTPAID   = "$3,404.60"
+			  OUTTOTINTPAID   = "$3,404.44"
 			   continue
 	       else 
               move OUTTOTINTPAID to WK-ACTUAL-VALUE
@@ -74,11 +74,11 @@
 			  OUTPRINCPAID(1) = "  $532.89" and
 			  OUTPAYMENT(1)   = "  $922.47" and
 			  OUTBALANCE(1)   = "$84,467.11" and
-			  OUTTOTINTPAID   = "$5,695.94"
+			  OUTTOTINTPAID   = "$5,697.01"
 			   continue
 	       else 
               move OUTTOTINTPAID to WK-ACTUAL-VALUE
-			  move "$5,695.94"   to WK-EXPECTED-VALUE
+			  move "$5,697.01"   to WK-EXPECTED-VALUE
               CALL "MFU_ASSERT_FAIL" USING
                  BY REFERENCE WS-FAIL-MSG
                  BY VALUE 80
@@ -102,11 +102,11 @@
 			  OUTPRINCPAID(1) = "  $163.02" and
 			  OUTPAYMENT(1)   = "  $200.40" and
 			  OUTBALANCE(1)   = " $6,336.98" and
-			  OUTTOTINTPAID   = "  $713.85"
+			  OUTTOTINTPAID   = "  $714.56"
 			   continue
 	       else 
               move OUTTOTINTPAID to WK-ACTUAL-VALUE
-			  move "  $713.85"   to WK-EXPECTED-VALUE
+			  move "  $714.56"   to WK-EXPECTED-VALUE
               CALL "MFU_ASSERT_FAIL" USING
                  BY REFERENCE WS-FAIL-MSG
                  BY VALUE 80
