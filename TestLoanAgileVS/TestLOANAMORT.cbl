@@ -42,6 +42,7 @@
                        by reference LOANINFO
                        by reference OUTDATA
 
+           *> Verify the outputs here
 		   IF OUTINTPAID(1) =   "  $135.00" and
 			  OUTPRINCPAID(1) = "  $685.92" and
 			  OUTPAYMENT(1)   = "  $820.92" and
@@ -56,7 +57,7 @@
                  BY VALUE 80
            END-IF
 
-           *> Verify the outputs here
+
            goback returning MFU-PASS-RETURN-CODE
        .
 
@@ -70,6 +71,7 @@
                        by reference LOANINFO
                        by reference OUTDATA
 
+           *> Verify the outputs here
 		   IF OUTINTPAID(1) =   "  $389.58" and
 			  OUTPRINCPAID(1) = "  $532.89" and
 			  OUTPAYMENT(1)   = "  $922.47" and
@@ -84,7 +86,7 @@
                  BY VALUE 80
            END-IF
 
-           *> Verify the outputs here
+
            goback returning MFU-PASS-RETURN-CODE
        .
 
@@ -98,6 +100,7 @@
                        by reference LOANINFO
                        by reference OUTDATA
 
+           *> Verify the outputs here
 		   IF OUTINTPAID(1) =   "   $37.37" and
 			  OUTPRINCPAID(1) = "  $163.02" and
 			  OUTPAYMENT(1)   = "  $200.40" and
@@ -112,9 +115,36 @@
                  BY VALUE 80
            END-IF
 
-           *> Verify the outputs here
            goback returning MFU-PASS-RETURN-CODE
        .
+
+       entry MFU-TC-PREFIX & "04".
+       
+           move 5500 to PRINCIPAL
+           move 0.0 to RATE
+           move 24 to LOANTERM
+       
+           call "LOANAMORT" using by reference LOANINFO
+                                  by reference OUTDATA
+
+           *> Test for Zero Rate
+           *>Verify the outputs here
+
+           IF OUTINTPAID(1) = "     $.00" and
+             OUTPRINCPAID(1) = "  $229.16" and
+             OUTPAYMENT(1) = "  $229.16" and
+             OUTBALANCE(1) = " $5,270.84" and
+             OUTTOTINTPAID = "     $.00"
+               continue
+           else
+               move OUTTOTINTPAID to WK-ACTUAL-VALUE
+               move "  $714.56" to WK-EXPECTED-VALUE
+               CALL "MFU_ASSERT_FAIL" USING BY REFERENCE WS-FAIL-MSG
+                                            BY VALUE 80
+           END-IF
+       
+           goback returning MFU-PASS-RETURN-CODE.
+
 
       $region TestCase Configuration
 
